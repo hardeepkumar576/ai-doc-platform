@@ -1,7 +1,9 @@
 import fs from 'fs/promises';
 
+// pdf-parse CommonJS/ESM interop issue — dono handle karo
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const pdfParse = require('pdf-parse');
+const pdfParseModule = require('pdf-parse');
+const pdfParse = pdfParseModule.default || pdfParseModule;
 
 export const extractTextFromFile = async (
   filePath: string,

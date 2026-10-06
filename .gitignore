@@ -1,6 +1,7 @@
 # Environment
 .env
 .env.*
+.env.docker
 !.env.example
 
 # Python (backend)
